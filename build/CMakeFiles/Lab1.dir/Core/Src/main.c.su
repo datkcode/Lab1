@@ -1,5 +1,5 @@
 D:\DAI_HOC\Uni3\VXL-VDK\Project_new\Lab1\Core\Src\main.c:90:8:display7SEG	16	static
-D:\DAI_HOC\Uni3\VXL-VDK\Project_new\Lab1\Core\Src\main.c:64:5:main	16	static
-D:\DAI_HOC\Uni3\VXL-VDK\Project_new\Lab1\Core\Src\main.c:221:6:SystemClock_Config	72	static
-D:\DAI_HOC\Uni3\VXL-VDK\Project_new\Lab1\Core\Src\main.c:255:13:MX_GPIO_Init	32	static
-D:\DAI_HOC\Uni3\VXL-VDK\Project_new\Lab1\Core\Src\main.c:308:6:Error_Handler	4	static
+D:\DAI_HOC\Uni3\VXL-VDK\Project_new\Lab1\Core\Src\main.c:64:5:main	32	static
+D:\DAI_HOC\Uni3\VXL-VDK\Project_new\Lab1\Core\Src\main.c:258:6:SystemClock_Config	72	static
+D:\DAI_HOC\Uni3\VXL-VDK\Project_new\Lab1\Core\Src\main.c:292:13:MX_GPIO_Init	32	static
+D:\DAI_HOC\Uni3\VXL-VDK\Project_new\Lab1\Core\Src\main.c:345:6:Error_Handler	4	static
