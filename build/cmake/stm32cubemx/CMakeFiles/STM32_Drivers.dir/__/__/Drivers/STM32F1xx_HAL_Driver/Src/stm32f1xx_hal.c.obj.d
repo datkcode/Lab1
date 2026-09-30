@@ -1,0 +1,32 @@
+cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj: \
+ D:\DAI_HOC\Uni3\VXL-VDK\Project_new\Lab1\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal.c \
+ D:/DAI_HOC/Uni3/VXL-VDK/Project_new/Lab1/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h \
+ D:/DAI_HOC/Uni3/VXL-VDK/Project_new/Lab1/Core/Inc/stm32f1xx_hal_conf.h \
+ D:/DAI_HOC/Uni3/VXL-VDK/Project_new/Lab1/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h \
+ D:/DAI_HOC/Uni3/VXL-VDK/Project_new/Lab1/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h \
+ D:/DAI_HOC/Uni3/VXL-VDK/Project_new/Lab1/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h \
+ D:/DAI_HOC/Uni3/VXL-VDK/Project_new/Lab1/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103x6.h \
+ D:/DAI_HOC/Uni3/VXL-VDK/Project_new/Lab1/Drivers/CMSIS/Include/core_cm3.h \
+ C:/PROGRA~2/ARMGNU~1/14EFD8~1.2RE/lib/gcc/arm-none-eabi/14.2.1/include/stdint.h \
+ C:/PROGRA~2/ARMGNU~1/14EFD8~1.2RE/arm-none-eabi/include/stdint.h \
+ C:/PROGRA~2/ARMGNU~1/14EFD8~1.2RE/arm-none-eabi/include/machine/_default_types.h \
+ C:/PROGRA~2/ARMGNU~1/14EFD8~1.2RE/arm-none-eabi/include/sys/features.h \
+ C:/PROGRA~2/ARMGNU~1/14EFD8~1.2RE/arm-none-eabi/include/_newlib_version.h \
+ C:/PROGRA~2/ARMGNU~1/14EFD8~1.2RE/arm-none-eabi/include/sys/_intsup.h \
+ C:/PROGRA~2/ARMGNU~1/14EFD8~1.2RE/arm-none-eabi/include/sys/_stdint.h \
+ D:/DAI_HOC/Uni3/VXL-VDK/Project_new/Lab1/Drivers/CMSIS/Include/cmsis_version.h \
+ D:/DAI_HOC/Uni3/VXL-VDK/Project_new/Lab1/Drivers/CMSIS/Include/cmsis_compiler.h \
+ D:/DAI_HOC/Uni3/VXL-VDK/Project_new/Lab1/Drivers/CMSIS/Include/cmsis_gcc.h \
+ D:/DAI_HOC/Uni3/VXL-VDK/Project_new/Lab1/Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h \
+ D:/DAI_HOC/Uni3/VXL-VDK/Project_new/Lab1/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h \
+ C:/PROGRA~2/ARMGNU~1/14EFD8~1.2RE/lib/gcc/arm-none-eabi/14.2.1/include/stddef.h \
+ D:/DAI_HOC/Uni3/VXL-VDK/Project_new/Lab1/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h \
+ D:/DAI_HOC/Uni3/VXL-VDK/Project_new/Lab1/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h \
+ D:/DAI_HOC/Uni3/VXL-VDK/Project_new/Lab1/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h \
+ D:/DAI_HOC/Uni3/VXL-VDK/Project_new/Lab1/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h \
+ D:/DAI_HOC/Uni3/VXL-VDK/Project_new/Lab1/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h \
+ D:/DAI_HOC/Uni3/VXL-VDK/Project_new/Lab1/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h \
+ D:/DAI_HOC/Uni3/VXL-VDK/Project_new/Lab1/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h \
+ D:/DAI_HOC/Uni3/VXL-VDK/Project_new/Lab1/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h \
+ D:/DAI_HOC/Uni3/VXL-VDK/Project_new/Lab1/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h \
+ D:/DAI_HOC/Uni3/VXL-VDK/Project_new/Lab1/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
