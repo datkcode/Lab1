@@ -30,5 +30,4 @@ CMakeFiles/Lab1.dir/Core/Src/main.c.obj: \
  D:/DAI_HOC/Uni3/VXL-VDK/Project_new/Lab1/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h \
  D:/DAI_HOC/Uni3/VXL-VDK/Project_new/Lab1/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h \
  D:/DAI_HOC/Uni3/VXL-VDK/Project_new/Lab1/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h \
- D:/DAI_HOC/Uni3/VXL-VDK/Project_new/Lab1/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
- D:/DAI_HOC/Uni3/VXL-VDK/Project_new/Lab1/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103x6.h
+ D:/DAI_HOC/Uni3/VXL-VDK/Project_new/Lab1/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
