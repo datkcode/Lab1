@@ -63,6 +63,14 @@ void clearAllClock() {
     HAL_GPIO_WritePin(GPIOA, LED[i], GPIO_PIN_SET);
   }
 }
+void setNumberOnClock(int num) {
+  int i = num % 12;
+  HAL_GPIO_WritePin(GPIOA, LED[i], GPIO_PIN_RESET);
+}
+void clearNumberOnClock(int num) {
+  int i = num % 12;
+  HAL_GPIO_WritePin(GPIOA, LED[i], GPIO_PIN_SET);
+}
 /* USER CODE END 0 */
 
 /**
@@ -96,6 +104,10 @@ int main(void) {
   MX_GPIO_Init();
   /* USER CODE BEGIN 2 */
   clearAllClock();
+  int hour = 4;
+  int minute = 48;
+  int second = 30;
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -104,11 +116,27 @@ int main(void) {
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+    clearAllClock();
 
-    for (int i = 0; i < 12; i++) {
-      HAL_GPIO_WritePin(GPIOA, LED[i], GPIO_PIN_RESET);
-      HAL_Delay(250);
-      HAL_GPIO_WritePin(GPIOA, LED[i], GPIO_PIN_SET);
+    setNumberOnClock(second / 5);
+    setNumberOnClock(minute / 5);
+    setNumberOnClock(hour % 12);
+
+    HAL_Delay(100);
+
+    second++;
+    if (second >= 60) {
+      second = 0;
+      minute++;
+    }
+
+    if (minute >= 60) {
+      minute = 0;
+      hour++;
+    }
+
+    if (hour >= 24) {
+      hour = 0;
     }
   }
   /* USER CODE END 3 */
