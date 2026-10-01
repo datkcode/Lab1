@@ -18,7 +18,6 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-#include "stm32f103x6.h"
 #include "stm32f1xx_hal_gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
@@ -56,7 +55,9 @@ static void MX_GPIO_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
+const uint16_t LED[12] = {GPIO_PIN_5,  GPIO_PIN_6,  GPIO_PIN_7,  GPIO_PIN_8,
+                          GPIO_PIN_9,  GPIO_PIN_10, GPIO_PIN_11, GPIO_PIN_12,
+                          GPIO_PIN_13, GPIO_PIN_14, GPIO_PIN_15, GPIO_PIN_4};
 /* USER CODE END 0 */
 
 /**
@@ -89,17 +90,23 @@ int main(void) {
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   /* USER CODE BEGIN 2 */
-
+  for (int i = 0; i < 12; i++) {
+    HAL_GPIO_WritePin(GPIOA, LED[i], GPIO_PIN_SET);
+  }
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1) {
     /* USER CODE END WHILE */
-    HAL_GPIO_TogglePin(GPIOA, LED_RED_Pin);
-    HAL_Delay(2000);
-    HAL_GPIO_TogglePin(GPIOA, LED_YELLOW_Pin);
+
     /* USER CODE BEGIN 3 */
+
+    for (int i = 0; i < 12; i++) {
+      HAL_GPIO_WritePin(GPIOA, LED[i], GPIO_PIN_RESET);
+      HAL_Delay(250);
+      HAL_GPIO_WritePin(GPIOA, LED[i], GPIO_PIN_SET);
+    }
   }
   /* USER CODE END 3 */
 }
@@ -152,10 +159,21 @@ static void MX_GPIO_Init(void) {
   __HAL_RCC_GPIOA_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, LED_RED_Pin | LED_YELLOW_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOA,
+                    GPIO_PIN_0 | GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3 |
+                        GPIO_PIN_4 | LED_RED_Pin | LED_YELLOW_Pin | GPIO_PIN_7 |
+                        GPIO_PIN_8 | GPIO_PIN_9 | GPIO_PIN_10 | GPIO_PIN_11 |
+                        GPIO_PIN_12 | GPIO_PIN_13 | GPIO_PIN_14 | GPIO_PIN_15,
+                    GPIO_PIN_RESET);
 
-  /*Configure GPIO pins : LED_RED_Pin LED_YELLOW_Pin */
-  GPIO_InitStruct.Pin = LED_RED_Pin | LED_YELLOW_Pin;
+  /*Configure GPIO pins : PA0 PA1 PA2 PA3
+                           PA4 LED_RED_Pin LED_YELLOW_Pin PA7
+                           PA8 PA9 PA10 PA11
+                           PA12 PA13 PA14 PA15 */
+  GPIO_InitStruct.Pin = GPIO_PIN_0 | GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3 |
+                        GPIO_PIN_4 | LED_RED_Pin | LED_YELLOW_Pin | GPIO_PIN_7 |
+                        GPIO_PIN_8 | GPIO_PIN_9 | GPIO_PIN_10 | GPIO_PIN_11 |
+                        GPIO_PIN_12 | GPIO_PIN_13 | GPIO_PIN_14 | GPIO_PIN_15;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
