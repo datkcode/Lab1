@@ -19,6 +19,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "stm32f103x6.h"
+#include "stm32f1xx.h"
 #include "stm32f1xx_hal.h"
 #include "stm32f1xx_hal_gpio.h"
 
@@ -57,7 +58,23 @@ static void MX_GPIO_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
+typedef enum { TRAFFIC_RED, TRAFFIC_GREEN, TRAFFIC_YELLOW } TrafficState;
+void setTrafficLight(TrafficState state) {
+  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5 | GPIO_PIN_6 | GPIO_PIN_7, GPIO_PIN_SET);
+  switch (state) {
+  case TRAFFIC_RED:
+    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET);
+    break;
+  case TRAFFIC_GREEN:
+    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_7, GPIO_PIN_RESET);
+    break;
+  case TRAFFIC_YELLOW:
+    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6, GPIO_PIN_RESET);
+    break;
+  default:
+    break;
+  }
+}
 /* USER CODE END 0 */
 
 /**
@@ -98,20 +115,14 @@ int main(void) {
   while (1) {
     /* USER CODE END WHILE */
 
-    HAL_GPIO_WritePin(GPIOA, LED_RED_Pin, GPIO_PIN_RESET);
-    HAL_GPIO_WritePin(GPIOA, LED_YELLOW_Pin, GPIO_PIN_SET);
-    HAL_GPIO_WritePin(GPIOA, LED_GREEN_Pin, GPIO_PIN_SET);
+    setTrafficLight(TRAFFIC_RED);
     HAL_Delay(5000);
 
-    HAL_GPIO_WritePin(GPIOA, LED_RED_Pin, GPIO_PIN_SET);
-    HAL_GPIO_WritePin(GPIOA, LED_YELLOW_Pin, GPIO_PIN_RESET);
-    HAL_GPIO_WritePin(GPIOA, LED_GREEN_Pin, GPIO_PIN_SET);
-    HAL_Delay(2000);
-
-    HAL_GPIO_WritePin(GPIOA, LED_RED_Pin, GPIO_PIN_SET);
-    HAL_GPIO_WritePin(GPIOA, LED_YELLOW_Pin, GPIO_PIN_SET);
-    HAL_GPIO_WritePin(GPIOA, LED_GREEN_Pin, GPIO_PIN_RESET);
+    setTrafficLight(TRAFFIC_GREEN);
     HAL_Delay(3000);
+
+    setTrafficLight(TRAFFIC_YELLOW);
+    HAL_Delay(2000);
 
     /* USER CODE BEGIN 3 */
   }
